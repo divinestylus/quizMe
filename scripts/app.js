@@ -20,6 +20,7 @@ form.addEventListener('submit', function(event) {
     else {
         window.location.href = 'home.html';
     }
+    return false;
 });
 
 profileImg.addEventListener('click', function() {
