@@ -4,6 +4,12 @@ let emailInput = document.querySelector('#email');
 let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 let profileImg = document.querySelector('.profileImg');
 let uploadImg = document.querySelector('.uploadImg');
+let addImgIcon = document.querySelector('.imgWrapper i');
+let imgWrapper = document.querySelector('.imgWrapper');
+
+
+
+
 
 form.addEventListener('submit', function(event) {
     localStorage.setItem("nameValue", nameInput.value);
@@ -12,29 +18,50 @@ form.addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form submission (optional)
 
     if (localStorage.getItem("nameValue").length < 3) { // Validate Name
-        alert('Name must be 3 or more characters!');
+        removeErrorMessages();
+        nameInput.insertAdjacentHTML('afterend', `<p class = "errorMsg">Name must be 3 or more characters.</p>`);
     }
     else if (!emailRegex.test(localStorage.getItem("emailValue"))) { // Validate Email
-        alert('Invalid Email');
+        removeErrorMessages();
+        emailInput.insertAdjacentHTML('afterend', `<p class = "errorMsg">Invalid email. Try again.</p>`);
     }
-    else {
+    else { // Open Home Page
+        removeErrorMessages();
         window.location.href = 'home.html';
+    }
+    function removeErrorMessages() {
+        const errorMessages = document.querySelectorAll('.errorMsg');
+        errorMessages.forEach( function(errorMessage) {
+            errorMessage.remove();
+        });
     }
     return false;
 });
 
-profileImg.addEventListener('click', function() {
+
+
+
+
+
+imgWrapper.addEventListener('click', function() {
     uploadImg.click();
 })
-
 uploadImg.addEventListener('change', function() {
     let newImg = uploadImg.files[0];
     const readFile = new FileReader();
-
     readFile.addEventListener('load', function(){
         profileImg.src = readFile.result;
         localStorage.setItem("profileImg", profileImg.src);
     })
     readFile.readAsDataURL(newImg);
-    // URL.revokeObjectURL(profileImg.src)
+    addImgIcon.style.display = "none";
+    imgWrapper.addEventListener('mouseover', function() {
+        addImgIcon.style.display = "flex";
+    })
+    
+    imgWrapper.addEventListener('mouseout', function() {
+        addImgIcon.style.display = "none";
+    })
 })
+
+

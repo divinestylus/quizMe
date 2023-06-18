@@ -32,6 +32,10 @@ body {
     font-family: 'Kanit', sans-serif;
 }
 
+form, input, button {
+    font-family: 'Kanit', sans-serif;
+}
+
 h1 {
     line-height: 1.8rem;
     text-transform: capitalize;
@@ -58,12 +62,6 @@ h2 i {
     justify-content: start;
     align-items: center;
     margin: 2.5rem 3rem 1rem 0;
-}
-
-.logo {
-    display: none;
-    width: 50px;
-    grid-area: logo;
 }
 
 .profileImg {
@@ -96,10 +94,13 @@ h2 i {
     width: 100%;
 }
 
-.search-feild:hover, .search-feild:focus-within {
-    border: none;
-    box-shadow: 1px 1px 2px 1px var(--darkBlack);
-    transition: 0.3s ease-in-out;
+.searchMsg {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    padding-block-start: 4rem;
+    display: none;
 }
 
 .top-bar .logo {

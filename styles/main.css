@@ -13,8 +13,7 @@
     box-sizing: inherit;
     padding: 0;
     margin: 0;
-}
-
+}   
 
 ::selection {
     background-color: var(--black);
@@ -30,40 +29,54 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--black);
     padding-inline: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
-.logo {
-    display: block;
-    margin: 0 auto;
+form, input, button {
+    font-family: 'Kanit', sans-serif;
 }
 
 section.wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    height: 100vh;
+    height: 60vh;
+    width: 100%;
     align-items: center;
     justify-content: center;
 }
 
-.logo {
-    width: 180px;
+.imgWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.imgWrapper i {
+    color: var(--white);
+    font-size: 2rem;
+    position: absolute;
 }
 
 .profileImg {
     margin: 0 auto;
+    position: relative;
+    z-index: -1;
     border-radius: 100px;
     width: 125px;
     height: 125px;
     object-fit: cover;
     overflow: auto;
-}
-.profileImg:hover {
-    filter: brightness(90%);
-    transition: 0.5s ease-in-out;
+    filter: brightness(70%);
 }
 
 form {
-    margin: -15rem auto 0 auto;
+    margin: 0 auto 0;
     width: 100%;
 }
 
@@ -75,18 +88,19 @@ form input, form button {
 }
 
 form input {
-    background-color: var(--darkGrey);
+    background-color: transparent;
+    border: 1px solid var(--lightGrey);
     margin-block-end: 0.5rem;
     color: var(--white);
     border-radius: 4px;
-    padding: 1rem;
+    padding: 0.7rem;
 }
 
 form button {
     background-color: var(--orange);
     color: var(--white);
     margin-block-start: 1.2rem;
-    padding: 1rem;    
+    padding: 0.7rem;    
     border-radius: 4px;
 }
 
@@ -99,6 +113,12 @@ form button:hover {
 
 .uploadImg {
     display: none;
+}
+
+.errorMsg {
+    font-size: 0.7rem;
+    color: var(--orange);
+    padding-block-end: 0.8rem;
 }
 
 @media (min-width: 600px) {

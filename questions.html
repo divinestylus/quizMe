@@ -9,34 +9,37 @@
 </head>
 <body>
     <section class="wrapper">
-        <img src="./assets/quizme-logo.svg" alt="quizme-logo" class="logo">
-        <span>HTML Quiz</span>
-        <h1>Question 3/10</h1>
-        <p>Hello Dribbblers..!!! Quiz App - Mobile Application with a dark and light theme. For more Visit us: </p>
+        <div class="top-bar">
+            <img src="./assets/user-icon.png" alt="profile-img" class="profileImg">
+            <p>0:59</p>
+        </div>
+        <p class="topic"><span>HTML</span> Quiz</p>
+        <h1>Question <span>1/10</span></h1>
+        <p>Which attribute is used to specify the location of an external CSS file?</p>
         <form>
             <div>
-                <input type="radio" name="a"> 
-                <label for="#a"><span>Ants</span></label>
+                <input type="radio" id="a" name="multipleChoice"> 
+                <label for="a"><span>href</span></label>
             </div>
             <div>
-                <input type="radio" name="b"> 
-                <label for="#b"><span>Banana</span></label>
+                <input type="radio" id="b" name="multipleChoice"> 
+                <label for="b"><span>src</span></label>
             </div>
             <div>
-                <input type="radio" name="c"> 
-                <label for="#c"><span>CrawFish</span></label>
+                <input type="radio" id="c" name="multipleChoice"> 
+                <label for="c"><span>class</span></label>
             </div>
             <div>
-                <input type="radio" name="d"> 
-                <label for="#d"><span>Doughnut</span></label>
+                <input type="radio" id="d" name="multipleChoice"> 
+                <label for="d"><span>style</span></label>
             </div>
-            <section>
+            <section class="buttons">
                 <button>Quit</button>
                 <button type="submit">Next</button>
             </section>
         </form>
 
     </section>
-    <script src="./scripts/app.js"></script>
+    <script src="./scripts/questions.js"></script>
 </body>
 </html>

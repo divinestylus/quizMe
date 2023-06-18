@@ -1,22 +1,42 @@
 let user = document.querySelector('.greeting span');
 let profileImg = document.querySelector('.profileImg');
-let searchBox = document.querySelector('.search-feild');
-let subjects = document.querySelectorAll('.subjects');
+let searchBoxes = document.querySelectorAll('.search-feild');
+let subjectsName = document.querySelectorAll('.subjects div p');
+let subjects = document.querySelectorAll('.subjects div');
+let noResult = document.querySelector('.searchMsg');
 
 user.innerText = localStorage.getItem("nameValue");
 profileImg.src = localStorage.getItem("profileImg");
 
-searchBox.addEventListener('keyup', function(event) {
 
-    for (let i = 0; i < subjects.children.length; i++) {
-        const searchSubjects = subjects.children[i].firstElementChild;
+searchBoxes.forEach( function(searchBox) {
+    searchBox.addEventListener('keyup', function(event) {
+        let hasMatch = false;
 
-        if (searchSubjects.v.innerText.toLowerCase().includes(searchBox.value.toLowerCase())){
-            searchSubjects.parentElement.style.display = "grid";
+        for (let i = 0; i < subjectsName.length; i++) {
+            const searchSubjects = subjectsName[i];
+    
+            if (searchSubjects.innerText.toLowerCase().includes(searchBox.value.toLowerCase())){
+                searchSubjects.parentElement.style.display = "grid";
+                hasMatch = true;
+            }
+            else {
+                searchSubjects.parentElement.style.display = "none";
+
+            }
+        }
+        if (hasMatch) {
+            noResult.style.display = "none";
         }
         else {
-            searchSubjects.parentElement.style.display = "none";
+            noResult.style.display = "block";
         }
-    }
-
+    })
 })
+
+subjects.forEach( function(subject) {
+    subject.addEventListener('click', function() {
+        window.location.href = 'questions.html';
+    })
+})
+
