@@ -1,5 +1,5 @@
 window.addEventListener('load', function() {
-    let timeLeft = 3; // 1 minute in second
+    let timeLeft = 4; // 1 minute in second
     let timer = setInterval(function() {
       // Calculate minutes and seconds
       let minutes = Math.floor(timeLeft / 60);
