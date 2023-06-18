@@ -1,6 +1,7 @@
 let profileImg = document.querySelector('.profileImg');
 let questonsOpt = document.querySelectorAll('form div');
 let labels = document.querySelectorAll('label');
+let multipleChoice = document.querySelectorAll('input');
 let currentlyClicked = null;
 
 profileImg.src = localStorage.getItem("profileImg");
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function countdown() {
     let timerDisplay = document.querySelector('.timer');
-    let timeLeft = 60; // 1 minute in second
+    let timeLeft = 5; // 1 minute in second
     let timer = setInterval(function() {
       // Calculate minutes and seconds
       let minutes = Math.floor(timeLeft / 60);
