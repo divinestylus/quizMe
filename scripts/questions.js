@@ -18,10 +18,30 @@ questonsOpt.forEach(function(option) {
     })
 })
 
-let timer = 59;
 
-function countDown() {
-    timer--;
-}
+document.addEventListener('DOMContentLoaded', function() {
+  countdown();
+})
 
-setInterval(countDown, 1000);
+
+function countdown() {
+    let timerDisplay = document.querySelector('.timer');
+    let timeLeft = 60; // 1 minute in second
+    let timer = setInterval(function() {
+      // Calculate minutes and seconds
+      let minutes = Math.floor(timeLeft / 60);
+      let seconds = timeLeft % 60;
+
+      // Display the time in MM:SS format
+      timerDisplay.innerText = minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0');
+
+      timeLeft--;
+  
+      // Check if the timer has reached 0
+      if (timeLeft < 0) {
+        clearInterval(timer);
+        timerDisplay.innerText = `Time's up!`;
+      }
+    }, 1000);
+  }
+ 
