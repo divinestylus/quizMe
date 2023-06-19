@@ -9,11 +9,12 @@ let takeAgainBtn = document.querySelector('button');
 
 
 takeAgainBtn.addEventListener('click', function(){
-    windowlocation.href = "home.html";
+    localStorage.removeItem("totalScore");
+    window.location.href = "home.html";
 })
 
 user.innerText = localStorage.getItem("nameValue");
-score.innerText = `${localStorage.getItem("totalScore")}%`;
+score.innerText = `${Number(localStorage.getItem("totalScore"))}%`;
 scoreMsg.innerText = `Quiz completed successfuly. You answered ${solvedQst} out of 10 questions.`;
 
 if (score > 90) {

@@ -67,7 +67,7 @@ p {
     border: 2px solid var(--orange);
     width: 45px;
     height: 45px;
-    margin: 4rem 0 0 0;
+    margin: 0 0 0 0;
     flex-shrink: 0;
     object-fit: cover;
     overflow: auto;
