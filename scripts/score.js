@@ -15,7 +15,7 @@ takeAgainBtn.addEventListener('click', function(){
 })
 
 user.innerText = localStorage.getItem("nameValue");
-score.innerText = `${Number(localStorage.getItem("totalScore"))}%`;
+score.innerText = `${totalScore}%`;
 scoreMsg.innerText = `Quiz completed successfuly. You answered ${solvedQst} out of 10 questions.`;
 
 if (totalScore > 90) {
