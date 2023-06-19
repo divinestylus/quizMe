@@ -5,6 +5,7 @@ let scoreMsg = document.querySelector('.scoreMsg');
 let solvedQst = localStorage.getItem("totalScore") / 10;
 let icon = document.querySelector('.reward');
 let takeAgainBtn = document.querySelector('button');
+let totalScore = Number(localStorage.getItem("totalScore"));
 
 
 
@@ -17,16 +18,16 @@ user.innerText = localStorage.getItem("nameValue");
 score.innerText = `${Number(localStorage.getItem("totalScore"))}%`;
 scoreMsg.innerText = `Quiz completed successfuly. You answered ${solvedQst} out of 10 questions.`;
 
-if (score > 90) {
+if (totalScore > 90) {
     feedback.innerText = "Congratulations ";
     icon.innerHTML = `<i class="fa-solid fa-medal"></i>`;
 }
-else if (score > 70) {
+else if (totalScore > 70) {
     feedback.innerText = "Great Job ";
     icon.innerHTML = `<i class="fa-solid fa-thumbs-up"></i>`;
     icon.firstChild.style.color = "#2e2e2e";
 }
-else if (score > 40) {
+else if (totalScore > 40) {
     feedback.innerText = "Poor Job ";
     icon.innerHTML = `<i class="fa-solid fa-thumbs-down"></i>`;
     icon.firstChild.style.color = "#2e2e2e";
