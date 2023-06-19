@@ -103,12 +103,6 @@ labels[1].firstElementChild.innerText = htmlQuestionsBank[i].answers[1];
 labels[2].firstElementChild.innerText = htmlQuestionsBank[i].answers[2];
 labels[3].firstElementChild.innerText = htmlQuestionsBank[i].answers[3];
 
-// Check if the label's text matches the correct answer
-// labels.forEach( function(label) {
-//   if (label.firstElementChild.innerText === htmlQuestionsBank[i].correctAnswer) {
-//     label.firstElementChild.checked = true; // Preselect the correct answer
-//   }
-// });
 
 
 let selectionMade = false;
@@ -143,6 +137,7 @@ questonsOpt.forEach(function(option) {
         option.lastElementChild.style.color = "#e86225";
         option.firstElementChild.style.border = "2px solid #ffffff";
         option.firstElementChild.style.backgroundColor = "#e86225";
+        score = 0;
       }
       
       currentlyClicked = option;

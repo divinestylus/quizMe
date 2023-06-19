@@ -33,12 +33,6 @@ body {
     font-family: 'Kanit', sans-serif;
 }
 
-/* .wrapper {
-    background-color: var(--darkGrey);
-    padding: 2rem;
-    border-radius: 4px;
-} */
-
 h1 {
     line-height: 1.8rem;
     text-transform: capitalize;
@@ -52,6 +46,7 @@ h1 {
 h1 span {
     color: var(--orange);
 }
+
 
 p {
     text-align: center;
@@ -67,6 +62,7 @@ p {
 }
 
 .profileImg {
+    display: none;
     border-radius: 100px;
     border: 2px solid var(--orange);
     width: 45px;
@@ -99,12 +95,13 @@ p {
     display: grid;
     align-items: center;
     justify-content: center;
+    padding-block-start: 4rem;
 }
 
 i {
-    font-size: 12rem;
+    font-size: 10rem;
     color: var(--orange);
-    padding-block: 1rem;
+    padding-block: 2rem;
 }
 
 .share {
@@ -130,7 +127,25 @@ i {
     cursor: pointer;
 }
 
+button {
+    display: block;
+    font-family: 'Kanit', sans-serif;
+    width: 100%;
+    border: 0;
+    outline: transparent;
+    background-color: var(--orange);
+    color: var(--white);
+    margin: 0 auto;
+    padding: 0.7rem;    
+    border-radius: 4px;
+}
 
+button:hover {
+    background-color: var(--white);
+    color: var(--orange);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
 
 @media(min-width: 211px) {
     .scoreMsg {
@@ -162,6 +177,10 @@ i {
     .share i {
         font-size: 2.5rem;
     }
+
+    button {
+        width: 450px;
+    }
 }
 
 /* Larger Screens */
@@ -176,5 +195,8 @@ i {
     i {
         font-size: 15rem;
         padding-block: 2.2rem;
+    }
+    button {
+        width: 550px;
     }
 }
