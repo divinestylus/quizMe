@@ -9,13 +9,11 @@ let imgWrapper = document.querySelector('.imgWrapper');
 
 
 
-
-
 form.addEventListener('submit', function(event) {
     localStorage.setItem("nameValue", nameInput.value);
     localStorage.setItem("emailValue", emailInput.value);
 
-    event.preventDefault(); // Prevent form submission (optional)
+    event.preventDefault();
 
     if (localStorage.getItem("nameValue").length < 3) { // Validate Name
         removeErrorMessages();
@@ -37,9 +35,6 @@ form.addEventListener('submit', function(event) {
     }
     return false;
 });
-
-
-
 
 
 

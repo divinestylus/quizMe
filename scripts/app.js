@@ -1,4 +1,4 @@
-window.addEventListener('load', function() {
+document.addEventListener('DOMContentLoaded', function() {
     let timeLeft = 4; // 1 minute in second
     let timer = setInterval(function() {
       // Calculate minutes and seconds

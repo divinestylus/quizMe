@@ -128,11 +128,6 @@ input[type="radio"] {
 
 }
 
-input[type="radio"]:checked {
-    background-color: var(--orange);
-    border: 2px solid var(--white);
-    color: green;
-}
 
 section.buttons {
     display: flex;
