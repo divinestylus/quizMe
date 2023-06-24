@@ -10,7 +10,9 @@
     --darkBlack: #070707;
 }
 
-*,*::after,*::before {
+*,
+*::after,
+*::before {
     box-sizing: inherit;
     padding: 0;
     margin: 0;
@@ -73,7 +75,7 @@ p {
     overflow: auto;
 }
 
-.greetings {
+.user {
     color: var(--white);
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -81,10 +83,6 @@ p {
     font-size: 0.8rem;
     padding-block-start: 0.5rem;
     font-weight: 400;
-}
-
-.greetings span {
-    color: var(--orange);
 }
 
 .scoreMsg {
@@ -136,7 +134,7 @@ button {
     background-color: var(--orange);
     color: var(--white);
     margin: 0 auto;
-    padding: 0.7rem;    
+    padding: 0.7rem;
     border-radius: 4px;
 }
 
@@ -150,7 +148,7 @@ button:hover {
 @media(min-width: 211px) {
     .scoreMsg {
         padding-block-end: 0;
-    }  
+    }
 }
 
 
@@ -159,21 +157,26 @@ button:hover {
     body {
         padding-inline: 4rem;
     }
-    .greetings {
+
+    .user {
         font-size: 1rem;
         padding: 0.5rem 0;
     }
+
     h1 {
         font-size: 2.3rem;
         line-height: 2.6rem;
     }
+
     p {
         font-size: 1rem;
     }
+
     i {
         font-size: 15rem;
         padding-block: 1.5rem;
     }
+
     .share i {
         font-size: 2.5rem;
     }
@@ -188,14 +191,17 @@ button:hover {
     body {
         padding-inline: 6rem;
     }
+
     h1 {
         font-size: 2.6rem;
         line-height: 3rem;
     }
+
     i {
         font-size: 15rem;
         padding-block: 2.2rem;
     }
+
     button {
         width: 550px;
     }

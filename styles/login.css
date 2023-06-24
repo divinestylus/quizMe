@@ -9,11 +9,14 @@
     --white: #ffffff;
     --orange: #e86225;
 }
-*,*::after,*::before {
+
+*,
+*::after,
+*::before {
     box-sizing: inherit;
     padding: 0;
     margin: 0;
-}   
+}
 
 ::selection {
     background-color: var(--black);
@@ -35,7 +38,9 @@ body {
     height: 100vh;
 }
 
-form, input, button {
+form,
+input,
+button {
     font-family: 'Kanit', sans-serif;
 }
 
@@ -80,7 +85,8 @@ form {
     width: 100%;
 }
 
-form input, form button {
+form input,
+form button {
     display: block;
     width: 100%;
     border: 0;
@@ -100,7 +106,7 @@ form button {
     background-color: var(--orange);
     color: var(--white);
     margin-block-start: 1.2rem;
-    padding: 0.7rem;    
+    padding: 0.7rem;
     border-radius: 4px;
 }
 

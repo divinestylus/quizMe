@@ -7,24 +7,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./styles/login.css">
-    <title>QiuzMe | Login</title>
+    <link rel="stylesheet" href="./styles/questions.css">
+    <title>QiuzMe | Questions</title>
 </head>
 
 <body>
     <section class="wrapper">
-        <div class="imgWrapper">
-            <i class="fa-solid fa-upload"></i>
+        <div class="top-bar">
             <img src="./assets/user-icon.png" alt="profile-img" class="profileImg">
+            <p class="timer"></p>
         </div>
-        <input type="file" class="uploadImg">
-        <form>
-            <input type="text" placeholder="Name" id="name">
-            <input type="text" placeholder="Email" id="email">
-            <button type="submit" id="submitBtn">Login</button>
-        </form>
+        <p class="topic"><span></span> Quiz</p>
+        <h1>Question <span></span></h1>
+        <p class="question"></p>
+        <div class="options">
+
+
+        </div>
+        <section class="buttons">
+            <button class="previous">Previous</button>
+            <button class="next">Next</button>
+        </section>
     </section>
-    <script src="./scripts/login.js"></script>
+    <script src="./scripts/htmlQuestionsBank.js"></script>
+    <script src="./scripts/css-questions.js"></script>
 </body>
 
 </html>

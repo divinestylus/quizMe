@@ -10,7 +10,9 @@
     --darkBlack: #070707;
 }
 
-*,*::after,*::before {
+*,
+*::after,
+*::before {
     box-sizing: inherit;
     padding: 0;
     margin: 0;
@@ -33,13 +35,12 @@ body {
     font-family: 'Kanit', sans-serif;
 }
 
-
-
-form, input, button {
+input,
+button {
     font-family: 'Kanit', sans-serif;
 }
 
-.topic{
+.topic {
     color: var(--white);
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -49,7 +50,8 @@ form, input, button {
     font-weight: 400;
 }
 
-h1 span, .topic span {
+h1 span,
+.topic span {
     color: var(--orange);
 }
 
@@ -93,14 +95,14 @@ p {
     font-size: 1rem;
 }
 
-form {
+.options {
     display: grid;
     padding-block: 2rem;
     align-items: center;
     gap: 10px;
 }
 
-form div {
+.options div {
     display: flex;
     align-items: center;
     border: 1px solid var(--lightGrey);
@@ -143,11 +145,11 @@ section.buttons button {
     cursor: pointer;
 }
 
-section.buttons button:nth-child(1){
+section.buttons button:nth-child(1) {
     background-color: var(--lightGrey);
 }
 
-section.buttons button:nth-child(2){
+section.buttons button:nth-child(2) {
     background-color: var(--orange);
 }
 
@@ -170,10 +172,12 @@ section.buttons button:nth-child(2):hover {
     body {
         padding-inline: 4rem;
     }
+
     .topic {
         font-size: 1rem;
         padding: 4rem 0 0 0;
     }
+
     h1 {
         width: 80%;
         font-size: 2.3rem;
@@ -187,12 +191,14 @@ section.buttons button:nth-child(2):hover {
     body {
         padding-inline: 6rem;
     }
+
     h1 {
         width: 50%;
         font-size: 2.6rem;
         line-height: 3rem;
     }
-    form {
+
+    .options {
         width: 100%;
     }
 }
