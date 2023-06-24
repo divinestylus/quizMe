@@ -9,7 +9,7 @@ let totalScore = Number(localStorage.getItem("score"));
 
 
 score.innerText = `${totalScore}%`;
-scoreMsg.innerText = `Quiz completed successfuly. You answered ${solvedQst} out of 10 questions.`;
+scoreMsg.innerText = `Quiz completed successfully. You answered ${solvedQst} out of 10 questions.`;
 
 if (totalScore >= 90) {
     feedback.innerText = "Congratulations";
