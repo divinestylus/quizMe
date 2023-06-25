@@ -1,7 +1,5 @@
 let form = document.querySelector('form');
 let nameInput = document.querySelector('#name');
-let emailInput = document.querySelector('#email');
-let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 let profileImg = document.querySelector('.profileImg');
 let uploadImg = document.querySelector('.uploadImg');
 let addImgIcon = document.querySelector('.imgWrapper i');
@@ -12,17 +10,12 @@ localStorage.setItem("profileImg", profileImg.src);
 
 form.addEventListener('submit', function (event) {
     localStorage.setItem("nameValue", nameInput.value);
-    localStorage.setItem("emailValue", emailInput.value);
 
     event.preventDefault();
 
     if (localStorage.getItem("nameValue").length < 3) { // Validate Name
         removeErrorMessages();
         nameInput.insertAdjacentHTML('afterend', `<p class = "errorMsg">Name must be 3 or more characters.</p>`);
-    }
-    else if (!emailRegex.test(localStorage.getItem("emailValue"))) { // Validate Email
-        removeErrorMessages();
-        emailInput.insertAdjacentHTML('afterend', `<p class = "errorMsg">Invalid email. Try again.</p>`);
     }
     else { // Open Home Page
         removeErrorMessages();
