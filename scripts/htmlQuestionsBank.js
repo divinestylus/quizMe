@@ -1,5 +1,5 @@
 // HTML Questions Bank
-const questionsBank = [
+const htmlQuestionsBank = [
   {
     question: "Which attribute is used to specify the location of an external CSS file?",
     options: ["href", "src", "class", "style"],
