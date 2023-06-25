@@ -178,7 +178,7 @@ const jsQuestionsBank = [
 
   {
     question: "What is the correct way to write a comment in JavaScript?",
-    options: ["&lt;-- This is a comment --&gt;", "// This is a comment", "// This is a comment", "** This is a comment **"],
+    options: ["&lt;-- This is a comment --&gt;", "// This is a comment", "/* This is a comment */", "** This is a comment **"],
     correctAnswer: "// This is a comment"
   },
 
